@@ -1,0 +1,25 @@
+{
+  "name": "mart",
+  "version": "1.0.0",
+  "description": "myapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "sms"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martmatics/martmatics.git"
+  },
+  "author": "\"akpobome\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martmatics/martmatics/issues"
+  },
+  "homepage": "https://github.com/martmatics/martmatics#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

@@ -5,20 +5,21 @@ const hostname = '127.0.0.1'
 const port = 5052
 
 const server = http.createServer((req, res) => {
-  res.statusCode = 200
-  res.setHeader('Content-Type', 'text/html')
+  let path = "./views"
+  if (req.url === "/") {
+      path = path + "/index.html"
+  } else if (req.url === "/contact") {
+      path = path + "/contact.html"
+  } else if (req.url === "/about") {
+      path = path + "/about.html"
+  } else if (req.url !== "/contact" || "/about" || "") {
+      path = path + "/error.html"
+  }
 
-console.log(req.url);
-let path = "./views"
-if (res.url === "/contact"){
-    path = path + "contact.html";
-}else {
-    path = path + "error.html";
-}
   fs.readFile(path, (err, data) => {
       if (err) return;
-
-      res.end(data)
+      res.writeHead (200, {"Content-Type": "text/html"});
+      res.write(data);
   })
 })
 server.listen(port, hostname, () => {

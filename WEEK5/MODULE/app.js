@@ -2,11 +2,10 @@ const { fs } = require('fs')
 const http = require('http')
 
 const hostname = '127.0.0.1'
-const port = 2020
+const port = 2025
 
-const server = http
-  .createServer((req, res) => {
-    let path = "./";
+const server = http.createServer((req, res) => {
+    let path = "./views";
     if (req.url === "/" || req.url === "/home") {
       path = path + "index.html";
       status = 200;

@@ -8,7 +8,17 @@ const PORT = 2022
 
 // app.get("/", (request, response) => {
 // response.send("<h1>welcome</h1>")
+// const products = [
+//     {
+//         name = "tv",
+//         price = "22"
+//     }
 
+//     {
+//         name = "phone",
+//         price = "25"
+//     }
+// ]
 
 // sending file to the browser
 app.get("/", (req, res) => {

@@ -12,7 +12,7 @@ const PORT = 2022
 //     {
 //         name = "tv",
 //         price = "22"
-//     }
+//     };
 
 //     {
 //         name = "phone",
